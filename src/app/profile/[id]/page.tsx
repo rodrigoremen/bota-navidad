@@ -44,7 +44,7 @@ export default function ProfilePage({
 
 					<div className="flex flex-col items-center justify-center space-y-4 sm:space-y-5">
 						<div className="relative">
-							<UserAvatar name={profile.name} fotoPerfil={profile.fotoPerfil} size="lg" />
+							<UserAvatar name={profile.name} fotoPerfil={profile.fotoPerfil} size="xl" />
 							<span className="absolute -top-2 -right-2 text-3xl sm:text-4xl transform group-hover:scale-110 transition-transform">🎁</span>
 						</div>
 						<div className="space-y-3">
@@ -58,7 +58,7 @@ export default function ProfilePage({
 							</p>
 							<Link href={`/profile/${id}/edit`}>
 								<Button variant="outline" size="sm" className="mt-3 border-amber-500/40 hover:bg-amber-500/10 hover:border-amber-400/60 text-amber-300 hover:text-amber-200 text-xs sm:text-sm transition-all">
-									✏️ Editar perfil
+									Editar perfil
 								</Button>
 							</Link>
 						</div>
@@ -120,7 +120,7 @@ export default function ProfilePage({
 
 				{/* Wishlist Grid */}
 				<div className="max-w-6xl mx-auto">
-					<h2 className="text-lg sm:text-2xl font-bold text-center mb-6 sm:mb-8 bg-gradient-to-r from-amber-300 to-yellow-300 bg-clip-text text-transparent">🎁 Lista de Regalos</h2>
+					<h2 className="text-lg sm:text-2xl font-bold text-center mb-6 sm:mb-8 bg-gradient-to-r from-white to-slate-600 bg-clip-text text-transparent">Lista de Regalos</h2>
 					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
 						{profile.wishlist.map((item, index) => (
 							<Card key={item.id} className="christmas-card group flex flex-col overflow-hidden h-full" style={{ animationDelay: `${index * 0.1}s` }}>
@@ -196,7 +196,7 @@ export default function ProfilePage({
 						<Card className="christmas-card border-dashed border-2 border-white/20 hover:border-amber-400/50 hover:bg-card/60 transition-all group">
 							<CardHeader>
 								<CardTitle className="text-center text-slate-400 group-hover:text-amber-300 transition-colors text-lg">
-									✨ Añadir nuevo regalo
+									Añadir nuevo regalo
 								</CardTitle>
 							</CardHeader>
 							<CardContent className="flex items-center justify-center h-24">

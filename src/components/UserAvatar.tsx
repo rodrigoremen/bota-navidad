@@ -17,7 +17,7 @@ function stringToColor(string: string) {
 interface UserAvatarProps {
 	name: string;
 	fotoPerfil?: string | null;
-	size?: 'sm' | 'md' | 'lg';
+	size?: 'sm' | 'md' | 'lg' | 'xl';
 }
 
 export function UserAvatar({ name, fotoPerfil, size = 'md' }: UserAvatarProps) {
@@ -32,6 +32,7 @@ export function UserAvatar({ name, fotoPerfil, size = 'md' }: UserAvatarProps) {
 		sm: 'h-10 w-10 text-sm',
 		md: 'h-16 w-16 text-xl',
 		lg: 'h-24 w-24 text-3xl',
+		xl: 'h-48 w-48 text-6xl',
 	}[size];
 
 	return (

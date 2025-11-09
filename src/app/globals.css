@@ -72,6 +72,11 @@ body {
     @apply backdrop-blur-md bg-card/50 border border-white/10 shadow-xl shadow-black/20 hover:shadow-2xl hover:shadow-rose-500/10 hover:border-white/15 hover:scale-[1.02] transition-all duration-300;
   }
 
+  .bounce-emoji {
+    display: inline-block;
+    animation: bounce-jump 1.2s ease-in-out infinite;
+  }
+
   .snow-effect {
     position: relative;
     overflow: hidden;
@@ -79,23 +84,151 @@ body {
 
   .snow-effect::before {
     content: "";
-    position: absolute;
-    top: -50px;
+    position: fixed;
+    top: 0;
     left: 0;
-    right: 0;
-    font-size: 20px;
-    opacity: 0;
-    animation: snowfall 20s linear infinite;
+    width: 100%;
+    height: 100%;
     pointer-events: none;
+    z-index: -1;
+    background-image: 
+      radial-gradient(2px 2px at 20% 30%, #ffffff, rgba(255, 255, 255, 0)),
+      radial-gradient(2px 2px at 60% 70%, #ffffff, rgba(255, 255, 255, 0)),
+      radial-gradient(1px 1px at 50% 50%, #ffffff, rgba(255, 255, 255, 0)),
+      radial-gradient(1px 1px at 80% 10%, #ffffff, rgba(255, 255, 255, 0)),
+      radial-gradient(2px 2px at 90% 60%, #ffffff, rgba(255, 255, 255, 0)),
+      radial-gradient(1px 1px at 30% 80%, #ffffff, rgba(255, 255, 255, 0)),
+      radial-gradient(1px 1px at 10% 90%, #ffffff, rgba(255, 255, 255, 0)),
+      radial-gradient(2px 2px at 40% 80%, #ffffff, rgba(255, 255, 255, 0)),
+      radial-gradient(2px 2px at 90% 10%, #ffffff, rgba(255, 255, 255, 0)),
+      radial-gradient(1px 1px at 70% 40%, #ffffff, rgba(255, 255, 255, 0)),
+      radial-gradient(1px 1px at 20% 60%, #ffffff, rgba(255, 255, 255, 0)),
+      radial-gradient(2px 2px at 5% 20%, #ffffff, rgba(255, 255, 255, 0)),
+      radial-gradient(1px 1px at 75% 75%, #ffffff, rgba(255, 255, 255, 0)),
+      radial-gradient(2px 2px at 15% 40%, #ffffff, rgba(255, 255, 255, 0)),
+      radial-gradient(1px 1px at 85% 30%, #ffffff, rgba(255, 255, 255, 0)),
+      radial-gradient(1.5px 1.5px at 35% 15%, #ffffff, rgba(255, 255, 255, 0)),
+      radial-gradient(1px 1px at 65% 55%, #ffffff, rgba(255, 255, 255, 0)),
+      radial-gradient(2px 2px at 25% 45%, #ffffff, rgba(255, 255, 255, 0)),
+      radial-gradient(1px 1px at 45% 25%, #ffffff, rgba(255, 255, 255, 0)),
+      radial-gradient(1.5px 1.5px at 55% 85%, #ffffff, rgba(255, 255, 255, 0));
+    background-size: 
+      200% 200%,
+      150% 150%,
+      180% 180%,
+      220% 220%,
+      170% 170%,
+      190% 190%,
+      160% 160%,
+      210% 210%,
+      175% 175%,
+      165% 165%,
+      185% 185%,
+      195% 195%,
+      155% 155%,
+      205% 205%,
+      215% 215%,
+      200% 200%,
+      170% 170%,
+      185% 185%,
+      195% 195%,
+      175% 175%;
+    background-attachment: fixed;
+    animation: snowfall-1 15s linear infinite, snowfall-2 18s linear infinite -5s, snowfall-3 20s linear infinite -10s;
   }
 
-  @keyframes snowfall {
+  .snow-effect::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background-image: 
+      radial-gradient(1px 1px at 25% 25%, #e0f6ff, rgba(224, 246, 255, 0)),
+      radial-gradient(1.5px 1.5px at 75% 45%, #e0f6ff, rgba(224, 246, 255, 0)),
+      radial-gradient(1px 1px at 45% 65%, #e0f6ff, rgba(224, 246, 255, 0)),
+      radial-gradient(2px 2px at 35% 15%, #e0f6ff, rgba(224, 246, 255, 0)),
+      radial-gradient(1px 1px at 65% 80%, #e0f6ff, rgba(224, 246, 255, 0)),
+      radial-gradient(1.5px 1.5px at 12% 35%, #e0f6ff, rgba(224, 246, 255, 0)),
+      radial-gradient(1px 1px at 88% 55%, #e0f6ff, rgba(224, 246, 255, 0)),
+      radial-gradient(1px 1px at 55% 20%, #e0f6ff, rgba(224, 246, 255, 0)),
+      radial-gradient(2px 2px at 42% 90%, #e0f6ff, rgba(224, 246, 255, 0)),
+      radial-gradient(1px 1px at 78% 38%, #e0f6ff, rgba(224, 246, 255, 0)),
+      radial-gradient(1.5px 1.5px at 8% 72%, #e0f6ff, rgba(224, 246, 255, 0)),
+      radial-gradient(1px 1px at 92% 28%, #e0f6ff, rgba(224, 246, 255, 0)),
+      radial-gradient(1px 1px at 38% 52%, #e0f6ff, rgba(224, 246, 255, 0)),
+      radial-gradient(2px 2px at 68% 12%, #e0f6ff, rgba(224, 246, 255, 0)),
+      radial-gradient(1px 1px at 22% 68%, #e0f6ff, rgba(224, 246, 255, 0));
+    background-size: 
+      200% 200%,
+      150% 150%,
+      180% 180%,
+      220% 220%,
+      170% 170%,
+      190% 190%,
+      160% 160%,
+      210% 210%,
+      175% 175%,
+      185% 185%,
+      195% 195%,
+      205% 205%,
+      165% 165%,
+      215% 215%,
+      175% 175%;
+    background-attachment: fixed;
+    animation: snowfall-1 18s linear infinite -3s, snowfall-2 20s linear infinite -8s, snowfall-3 22s linear infinite -12s;
+  }
+
+  @keyframes bounce-jump {
     0% {
       transform: translateY(0);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     }
-
+    25% {
+      transform: translateY(-20px);
+      animation-timing-function: cubic-bezier(0, 0.5, 0.2, 1);
+    }
+    50% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    75% {
+      transform: translateY(-10px);
+      animation-timing-function: cubic-bezier(0, 0.5, 0.2, 1);
+    }
     100% {
-      transform: translateY(100vh);
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+  }
+
+  @keyframes snowfall-1 {
+    0% {
+      background-position: 2% 0%, 3% 0%, 1% 0%, 4% 0%, 2.5% 0%, 3.5% 0%, 1.5% 0%, 3.8% 0%, 2.2% 0%, 3.2% 0%, 1.8% 0%, 4.2% 0%, 2.5% 0%, 3.5% 0%, 1.5% 0%;
+    }
+    100% {
+      background-position: 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%;
+    }
+  }
+
+  @keyframes snowfall-2 {
+    0% {
+      background-position: -2% 0%, -3% 0%, -1% 0%, -4% 0%, -2.5% 0%, -3.5% 0%, -1.5% 0%, -3.8% 0%, -2.2% 0%, -3.2% 0%;
+    }
+    100% {
+      background-position: 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%;
+    }
+  }
+
+  @keyframes snowfall-3 {
+    0% {
+      background-position: 1.5% 0%, 2.5% 0%, 0.8% 0%, 3.2% 0%, 1.8% 0%, 2.8% 0%, 0.5% 0%, 3.5% 0%, 1.5% 0%, 2.5% 0%, 0.8% 0%, 3.2% 0%, 1.8% 0%, 2.8% 0%, 0.5% 0%;
+    }
+    100% {
+      background-position: 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%;
     }
   }
 }

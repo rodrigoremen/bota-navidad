@@ -18,21 +18,19 @@ export default async function Home() {
 	return (
 		<div className="min-h-screen snow-effect">
 			<div className="container mx-auto py-16 px-4">
-				{/* Header */}
-				<div className="text-center mb-16 space-y-6">
-					<div className="flex items-center justify-center gap-4 mb-6">
-						<span className="text-6xl">🎄</span>
-						<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-rose-400 via-red-400 to-amber-300 bg-clip-text text-transparent tracking-tight">
-							Bota de Navidad
-						</h1>
-						<span className="text-6xl">🎅</span>
-					</div>
-					<p className="text-lg text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
-						Comparte tus deseos navideños con familia y amigos
-					</p>
+			{/* Header */}
+			<div className="text-center mb-16 space-y-6">
+				<div className="flex items-center justify-center gap-4 mb-6">
+					<span className="text-6xl bounce-emoji">🎄</span>
+					<h1 className="text-5xl md:text-7xl font-bold text-rose-400 tracking-tight">
+						Bota de Navidad
+					</h1>
+					<span className="text-6xl bounce-emoji">🎅</span>
 				</div>
-
-				{/* Profile Cards Grid */}
+				<p className="text-lg text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
+					Comparte tus deseos navideños con familia y amigos
+				</p>
+			</div>				{/* Profile Cards Grid */}
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
 					{profiles.map((profile) => (
 						<Card key={profile.id} className="christmas-card group">

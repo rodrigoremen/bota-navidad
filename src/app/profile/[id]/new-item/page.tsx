@@ -274,7 +274,7 @@ export default function NewItemPage({
 					{/* Previsualización */}
 					<Card className="christmas-card">
 						<CardHeader>
-							<CardTitle className="text-xl text-center">👀 Previsualización</CardTitle>
+							<CardTitle className="text-xl text-center">Previsualización</CardTitle>
 						</CardHeader>
 						<CardContent className="space-y-4">
 							{image && (
