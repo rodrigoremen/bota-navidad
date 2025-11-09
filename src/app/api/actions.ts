@@ -1,5 +1,6 @@
 'use server'
 import prisma from "@/libs/prisma"
+import { revalidatePath } from "next/cache"
 
 export async function createProfile(name: string, password: string) {
     try {
@@ -9,6 +10,8 @@ export async function createProfile(name: string, password: string) {
                 password: password,
             },
         })
+        // Revalidar la página principal para que se actualice la lista de perfiles
+        revalidatePath('/')
         return { success: true, profile: newProfile }
     } catch (error) {
         console.error('Failed to create profile:', error)
@@ -33,6 +36,9 @@ export async function updateProfile(id: number, data: {
             where: { id },
             data: data,
         })
+        // Revalidar ambas rutas: la lista de perfiles y la página del perfil específico
+        revalidatePath('/')
+        revalidatePath(`/profile/${id}`)
         return { success: true, profile: updatedProfile }
     } catch (error) {
         console.error('Failed to update profile:', error)
@@ -103,6 +109,9 @@ export async function addWishlistItem(profileId: number, name: string, url: stri
                 profileId: profileId,
             },
         })
+        // Revalidar la página del perfil para mostrar el nuevo item
+        revalidatePath(`/profile/${profileId}`)
+        revalidatePath('/')
         return { success: true, item: newItem }
     } catch (error) {
         console.error('Failed to add wishlist item:', error)
