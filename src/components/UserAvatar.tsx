@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, AvatarFallback } from './ui/avatar';
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 
 function stringToColor(string: string) {
 	let hash = 0;
@@ -16,10 +16,11 @@ function stringToColor(string: string) {
 
 interface UserAvatarProps {
 	name: string;
+	fotoPerfil?: string | null;
 	size?: 'sm' | 'md' | 'lg';
 }
 
-export function UserAvatar({ name, size = 'md' }: UserAvatarProps) {
+export function UserAvatar({ name, fotoPerfil, size = 'md' }: UserAvatarProps) {
 	const initials = name
 		.split(' ')
 		.map((n) => n[0])
@@ -28,13 +29,14 @@ export function UserAvatar({ name, size = 'md' }: UserAvatarProps) {
 	const backgroundColor = stringToColor(name);
 
 	const sizeClass = {
-		sm: 'h-8 w-8 text-xs',
-		md: 'h-12 w-12 text-lg',
-		lg: 'h-16 w-16 text-2xl',
+		sm: 'h-10 w-10 text-sm',
+		md: 'h-16 w-16 text-xl',
+		lg: 'h-24 w-24 text-3xl',
 	}[size];
 
 	return (
 		<Avatar className={sizeClass}>
+			{fotoPerfil && <AvatarImage src={fotoPerfil} alt={name} />}
 			<AvatarFallback style={{ backgroundColor, color: '#fff' }}>
 				{initials}
 			</AvatarFallback>

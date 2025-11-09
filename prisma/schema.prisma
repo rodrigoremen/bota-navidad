@@ -9,21 +9,40 @@ generator client {
 }
 
 datasource db {
-  provider  = "postgresql"
-  url       = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  // directUrl is optional for Neon - only needed if using connection pooling
+  // directUrl = env("DIRECT_URL")
 }
 
 model Profile {
-  id       Int     @id @default(autoincrement())
-  name     String
-  wishlist WishlistItem[]
+  id              Int              @id @default(autoincrement())
+  name            String
+  password        String?          // Contraseña sin encriptar
+  fotoPerfil      String?          // URL de Cloudinary o null
+  colorFavorito   String?          // Color favorito
+  tallaPlayera    String?          // XS, S, M, L, XL, XXL
+  tallaPantalon   String?          // 28, 30, 32, etc
+  tallaTenis      String?          // 5, 6, 7, etc
+  pasatiempos     String?          // Hobbies o intereses
+  comidaFavorita  String?          // Comida favorita
+  notas           String?          // Notas adicionales
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  wishlist        WishlistItem[]
 }
 
 model WishlistItem {
-  id        Int     @id @default(autoincrement())
-  name      String
-  url       String
-  profileId Int
-  profile   Profile @relation(fields: [profileId], references: [id])
+  id          Int     @id @default(autoincrement())
+  name        String
+  url         String
+  image       String?         // URL de la imagen del regalo
+  description String?         // Descripción del regalo
+  price       Float?          // Precio aproximado
+  category    String?         // Categoría (Tecnología, Ropa, Libros, etc)
+  priority    String?         // Alta, Media, Baja
+  profileId   Int
+  profile     Profile @relation(fields: [profileId], references: [id])
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
 }
