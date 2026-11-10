@@ -58,7 +58,7 @@ export default function NewProfilePage() {
                 <Card className="max-w-md mx-auto christmas-card">
                     <CardHeader className="text-center space-y-3">
                         <div className="text-6xl mb-4">🎅</div>
-                        <CardTitle className="text-3xl font-bold bg-gradient-to-r from-rose-400 via-red-400 to-amber-300 bg-clip-text text-transparent">
+                        <CardTitle className="text-3xl font-bold bg-linear-to-r from-rose-400 via-red-400 to-amber-300 bg-clip-text text-transparent">
                             Crea tu perfil
                         </CardTitle>
                         <p className="text-slate-400 text-sm font-light">¡Empieza tu lista de regalos!</p>

@@ -43,3 +43,6 @@ next-env.d.ts
 /migrations
 prisma/migrations/migration_lock.toml
 prisma/migrations/20241106002744_init/migration.sql
+
+# prisma generated client
+/src/generated/

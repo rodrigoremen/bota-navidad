@@ -48,7 +48,7 @@ export default function ProfilePage({
 							<span className="absolute -top-2 -right-2 text-3xl sm:text-4xl transform group-hover:scale-110 transition-transform">🎁</span>
 						</div>
 						<div className="space-y-3">
-							<h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-rose-400 via-red-400 to-amber-300 bg-clip-text text-transparent tracking-tight">
+							<h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-linear-to-r from-rose-400 via-red-400 to-amber-300 bg-clip-text text-transparent tracking-tight">
 								Bota de {profile.name}
 							</h1>
 							<p className="text-slate-400 text-sm sm:text-base flex items-center justify-center gap-2">
@@ -67,7 +67,7 @@ export default function ProfilePage({
 				{(profile.colorFavorito || profile.tallaPlayera || profile.tallaPantalon || profile.tallaTenis || profile.pasatiempos || profile.comidaFavorita || profile.notas) && (
 					<Card className="christmas-card mb-8 max-w-4xl mx-auto">
 						<CardHeader>
-							<CardTitle className="text-2xl text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+							<CardTitle className="text-2xl text-center bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
 								✨ Información Personal
 							</CardTitle>
 						</CardHeader>
@@ -120,7 +120,7 @@ export default function ProfilePage({
 
 				{/* Wishlist Grid */}
 				<div className="max-w-6xl mx-auto">
-					<h2 className="text-lg sm:text-2xl font-bold text-center mb-6 sm:mb-8 bg-gradient-to-r from-white to-slate-600 bg-clip-text text-transparent">Lista de Regalos</h2>
+					<h2 className="text-lg sm:text-2xl font-bold text-center mb-6 sm:mb-8 bg-linear-to-r from-white to-slate-600 bg-clip-text text-transparent">Lista de Regalos</h2>
 					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
 						{profile.wishlist.map((item, index) => (
 							<Card key={item.id} className="christmas-card group flex flex-col overflow-hidden h-full" style={{ animationDelay: `${index * 0.1}s` }}>
@@ -183,7 +183,7 @@ export default function ProfilePage({
 
 								<CardFooter>
 									<a href={item.url} target="_blank" rel="noopener noreferrer" className="w-full">
-										<Button className="w-full bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 shadow-md shadow-emerald-500/20 hover:shadow-emerald-500/30">
+										<Button className="w-full bg-linear-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 shadow-md shadow-emerald-500/20 hover:shadow-emerald-500/30">
 											<ExternalLink className="mr-2 h-4 w-4" />
 											Ver regalo
 										</Button>

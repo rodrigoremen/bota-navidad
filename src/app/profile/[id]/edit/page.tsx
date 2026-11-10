@@ -102,7 +102,7 @@ export default function EditProfilePage({
                     <Card className="max-w-md mx-auto christmas-card">
                         <CardHeader className="text-center space-y-3">
                             <div className="text-6xl mb-2">🔒</div>
-                            <CardTitle className="text-3xl font-bold bg-gradient-to-r from-rose-400 to-amber-300 bg-clip-text text-transparent">
+                            <CardTitle className="text-3xl font-bold bg-linear-to-r from-rose-400 to-amber-300 bg-clip-text text-transparent">
                                 Verificar identidad
                             </CardTitle>
                             <p className="text-slate-400 text-sm font-light">Ingresa tu contraseña para editar tu perfil</p>
@@ -135,7 +135,7 @@ export default function EditProfilePage({
                                         Cancelar
                                     </Button>
                                 </Link>
-                                <Button type="submit" className="w-full sm:flex-1 bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 shadow-md shadow-amber-500/20 hover:shadow-amber-500/30">
+                                <Button type="submit" className="w-full sm:flex-1 bg-linear-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 shadow-md shadow-amber-500/20 hover:shadow-amber-500/30">
                                     Verificar
                                 </Button>
                             </CardFooter>
@@ -159,7 +159,7 @@ export default function EditProfilePage({
 
                     <Card className="christmas-card">
                         <CardHeader className="text-center space-y-4">
-                            <CardTitle className="text-3xl font-bold bg-gradient-to-r from-rose-400 via-red-400 to-amber-300 bg-clip-text text-transparent">
+                            <CardTitle className="text-3xl font-bold bg-linear-to-r from-rose-400 via-red-400 to-amber-300 bg-clip-text text-transparent">
                                 Editar Perfil
                             </CardTitle>
                             <p className="text-slate-400 text-sm font-light">Personaliza tu información para que todos sepan más de ti</p>

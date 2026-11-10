@@ -81,7 +81,7 @@ export default async function Home() {
 			</div>
 
 			{/* Decorative Elements */}
-			<div className="fixed bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none" />
+			<div className="fixed bottom-0 left-0 right-0 h-24 bg-linear-to-t from-black/40 via-black/10 to-transparent pointer-events-none" />
 		</div>
 	);
 }

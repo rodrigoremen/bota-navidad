@@ -91,7 +91,7 @@ export default function NewItemPage({
 					<Card className="christmas-card">
 						<CardHeader className="text-center space-y-3">
 							<div className="text-6xl mb-2">🎁</div>
-							<CardTitle className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-rose-400 bg-clip-text text-transparent">
+							<CardTitle className="text-2xl font-bold bg-linear-to-r from-emerald-400 to-rose-400 bg-clip-text text-transparent">
 								Añade un nuevo regalos
 							</CardTitle>
 							<p className="text-slate-400 text-sm font-light">Comparte qué deseas para esta Navidad</p>
@@ -252,7 +252,7 @@ export default function NewItemPage({
 								</Button>
 								<Button
 									type="submit"
-									className="w-full sm:flex-1 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 shadow-md shadow-emerald-500/20 hover:shadow-emerald-500/30"
+									className="w-full sm:flex-1 bg-linear-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 shadow-md shadow-emerald-500/20 hover:shadow-emerald-500/30"
 									disabled={isSubmitting}
 								>
 									{isSubmitting ? (
