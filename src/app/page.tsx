@@ -1,87 +1,156 @@
-import { Button } from '@/components/ui/button';
-import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardFooter,
-	CardHeader,
-	CardTitle,
-} from '@/components/ui/card';
-import { PlusCircle, Gift } from 'lucide-react';
-import Link from 'next/link';
-import { getProfiles } from './api/actions';
-import { UserAvatar } from '@/components/UserAvatar';
+import Link from "next/link"
+import { ChevronRight, Gift, LogOut, Plus, Users } from "lucide-react"
+import { logout } from "@/app/api/auth-actions"
+import { getMyGroups } from "@/app/api/group-actions"
+import { GiftMark } from "@/components/brand/GiftMark"
+import { VillageScene } from "@/components/brand/VillageScene"
+import { TopBar } from "@/components/brand/TopBar"
+import { UserAvatar } from "@/components/UserAvatar"
+import { Button } from "@/components/ui/button"
+import { getSessionProfile } from "@/libs/session"
+import { formatExchangeDate } from "@/libs/utils"
+import { redirect } from "next/navigation"
+
+type SessionProfile = { id: number; name: string; fotoPerfil: string | null }
 
 export default async function Home() {
-	const profiles = await getProfiles();
+  const profile = await getSessionProfile()
+  if (!profile) redirect("/login")
 
-	return (
-		<div className="min-h-screen snow-effect">
-			<div className="container mx-auto py-16 px-4">
-			{/* Header */}
-			<div className="text-center mb-16 space-y-6">
-				<div className="flex items-center justify-center gap-4 mb-6">
-					<span className="text-6xl bounce-emoji">🎄</span>
-					<h1 className="text-5xl md:text-7xl font-bold text-rose-400 tracking-tight">
-						Bota de Navidad
-					</h1>
-					<span className="text-6xl bounce-emoji">🎅</span>
-				</div>
-				<p className="text-lg text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
-					Comparte tus deseos navideños con familia y amigos
-				</p>
-			</div>				{/* Profile Cards Grid */}
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-					{profiles.map((profile) => (
-						<Card key={profile.id} className="christmas-card group">
-							<CardHeader className="flex flex-row items-center space-x-4 pb-4">
-								<div className="relative">
-									<UserAvatar name={profile.name} fotoPerfil={profile.fotoPerfil} size="md" />
-									<span className="absolute -top-2 -right-2 text-2xl transform group-hover:scale-110 transition-transform">🎁</span>
-								</div>
-								<div className="flex-1">
-									<CardTitle className="text-xl group-hover:text-rose-300 transition-colors duration-300">
-										{profile.name}
-									</CardTitle>
-									<CardDescription className="flex items-center gap-2 text-sm mt-1">
-										<Gift className="h-4 w-4 text-amber-300" />
-										<span className="font-semibold text-emerald-300">{profile.wishlistCount}</span>
-										<span>regalos en su bota</span>
-									</CardDescription>
-								</div>
-							</CardHeader>
-							<CardFooter>
-								<Link href={`/profile/${profile.id}`} className="w-full">
-									<Button className="w-full christmas-gradient hover:shadow-rose-500/40 transition-all">
-										<Gift className="mr-2 h-4 w-4" />
-										Ver regalos
-									</Button>
-								</Link>
-							</CardFooter>
-						</Card>
-					))}
+  const groups = await getMyGroups(profile.id)
 
-					{/* Add Profile Card */}
-					<Card className="christmas-card border-dashed border-2 border-white/20 hover:border-rose-400/50 hover:bg-card/60 transition-all group">
-						<CardHeader>
-							<CardTitle className="text-center text-slate-400 group-hover:text-rose-300 transition-colors duration-300 text-lg">
-								Añadir nuevo perfil
-							</CardTitle>
-						</CardHeader>
-						<CardContent className="flex items-center justify-center h-24">
-							<Link href="/new-profile">
-								<Button variant="outline" size="lg" className="border-emerald-500/40 hover:bg-emerald-500/10 hover:border-emerald-400/60 transition-all">
-									<PlusCircle className="mr-2 h-6 w-6" />
-									Crear perfil
-								</Button>
-							</Link>
-						</CardContent>
-					</Card>
-				</div>
-			</div>
+  if (groups.length === 0) {
+    return <EmptyHome profile={profile} />
+  }
 
-			{/* Decorative Elements */}
-			<div className="fixed bottom-0 left-0 right-0 h-24 bg-linear-to-t from-black/40 via-black/10 to-transparent pointer-events-none" />
-		</div>
-	);
+  return (
+    <div className="min-h-dvh">
+      <TopBar profile={profile} hint="Tus intercambios" />
+
+      <main className="screen screen-pad-bottom">
+        <header className="mt-6">
+          <h1 className="text-balance text-[1.6rem] font-semibold leading-tight tracking-[-0.01em] text-pine">
+            Tus intercambios
+          </h1>
+          <p className="mt-1 text-[0.9rem] leading-snug text-muted-foreground">
+            Elige uno para ver a los participantes y tu lista.
+          </p>
+        </header>
+
+        <ul className="stagger mt-5 space-y-3">
+          {groups.map((group) => {
+            const date = formatExchangeDate(group.exchangeDate)
+            return (
+              <li key={group.id}>
+                <Link
+                  href={`/groups/${group.id}`}
+                  className="card flex items-center gap-3.5 p-4 pr-2.5 transition-transform duration-200 ease-out hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine focus-visible:ring-offset-2 focus-visible:ring-offset-mint"
+                >
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-pine/10 text-pine">
+                    <Gift className="h-5 w-5" strokeWidth={1.8} />
+                  </span>
+
+                  <span className="min-w-0 flex-1">
+                    <span className="block truncate text-[1rem] font-semibold leading-tight text-ink">
+                      {group.name}
+                    </span>
+                    <span className="mt-1 block text-[0.78rem] leading-snug text-muted-foreground">
+                      {date ?? "Sin fecha"}
+                    </span>
+                    <span className="mt-0.5 block text-[0.78rem] leading-snug text-muted-foreground">
+                      {group.memberCount}{" "}
+                      {group.memberCount === 1 ? "participante" : "participantes"}
+                    </span>
+                    <span className="mt-1 block text-[0.68rem] font-medium text-pine">
+                      {group.itemCount === 0
+                        ? "Tu lista está vacía"
+                        : `${group.itemCount} ${group.itemCount === 1 ? "regalo" : "regalos"} en tu lista`}
+                    </span>
+                  </span>
+
+                  <ChevronRight className="h-5 w-5 shrink-0 text-pine/45" strokeWidth={2} />
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+
+        <div className="mt-5 grid grid-cols-2 gap-3">
+          <Button asChild variant="secondary" className="w-full">
+            <Link href="/groups/new">
+              <Plus className="h-4 w-4" strokeWidth={2.2} />
+              Nuevo grupo
+            </Link>
+          </Button>
+          <Button asChild className="w-full">
+            <Link href="/groups/join">
+              <Users className="h-4 w-4" strokeWidth={2} />
+              Unirme
+            </Link>
+          </Button>
+        </div>
+
+        <p className="mt-5 text-center text-[0.78rem] leading-snug text-muted-foreground">
+          Para unirte a un intercambio necesitas el código que te compartieron.
+        </p>
+      </main>
+    </div>
+  )
+}
+
+function EmptyHome({ profile }: { profile: SessionProfile }) {
+  return (
+    <main className="relative flex min-h-dvh flex-col overflow-hidden bg-pine text-cream">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_65%_at_18%_0%,#2F7460_0%,transparent_56%),linear-gradient(168deg,#266b57_0%,#1F5C4A_46%,#1D5747_100%)]"
+      />
+
+      <div className="relative z-10 flex items-center justify-between px-5 pt-5">
+        <Link
+          href={`/profile/${profile.id}/edit`}
+          className="flex items-center gap-2.5 rounded-full pr-3 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream focus-visible:ring-offset-2 focus-visible:ring-offset-pine"
+          aria-label="Editar mi perfil"
+        >
+          <UserAvatar name={profile.name} fotoPerfil={profile.fotoPerfil} size="sm" />
+          <span className="text-[0.84rem] font-medium text-cream/85">{profile.name}</span>
+        </Link>
+
+        <form action={logout}>
+          <button
+            type="submit"
+            aria-label="Cerrar sesión"
+            className="flex h-10 w-10 items-center justify-center rounded-full text-cream/75 transition-colors hover:bg-cream/10 hover:text-cream"
+          >
+            <LogOut className="h-[1.15rem] w-[1.15rem]" strokeWidth={1.8} />
+          </button>
+        </form>
+      </div>
+
+      <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-7 text-center">
+        <GiftMark className="h-28 w-28 drop-shadow-[0_14px_26px_rgba(0,0,0,0.28)]" />
+
+        <h1 className="mt-8 max-w-[19ch] text-balance text-[1.85rem] font-semibold leading-[1.15] tracking-[-0.015em]">
+          Aún no estás participando en ningún grupo
+        </h1>
+
+        <div className="mt-9 w-full space-y-2.5 rounded-[26px] border border-cream/15 bg-cream/[0.07] p-4">
+          <Button asChild variant="on-dark" size="lg" className="w-full">
+            <Link href="/groups/new">
+              <Plus className="h-4 w-4" strokeWidth={2.4} />
+              Nuevo grupo
+            </Link>
+          </Button>
+          <Button asChild size="lg" className="w-full">
+            <Link href="/groups/join">
+              <Users className="h-4 w-4" strokeWidth={2.1} />
+              Unirse a un grupo
+            </Link>
+          </Button>
+        </div>
+      </div>
+
+      <VillageScene className="-mb-px h-48 text-pine-deep" />
+    </main>
+  )
 }

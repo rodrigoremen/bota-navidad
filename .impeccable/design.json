@@ -1,0 +1,514 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-14T01:12:14.587Z",
+  "title": "Design System: Bota de Navidad",
+  "extensions": {
+    "colorMeta": {
+      "bota": {
+        "role": "primary",
+        "displayName": "Rojo Bota",
+        "canonical": "oklch(54.6% 0.1875 22.3)",
+        "tonalRamp": [
+          "oklch(15.0% 0.1378 22.3)",
+          "oklch(27.0% 0.1805 22.3)",
+          "oklch(39.0% 0.1875 22.3)",
+          "oklch(51.0% 0.1807 22.3)",
+          "oklch(63.0% 0.1667 22.3)",
+          "oklch(75.0% 0.1528 22.3)",
+          "oklch(86.0% 0.1400 22.3)",
+          "oklch(95.0% 0.1295 22.3)"
+        ]
+      },
+      "bota-deep": {
+        "role": "primary",
+        "displayName": "Rojo Bota Profundo",
+        "canonical": "oklch(46.8% 0.1658 22.6)",
+        "tonalRamp": [
+          "oklch(15.0% 0.1219 22.6)",
+          "oklch(27.0% 0.1597 22.6)",
+          "oklch(39.0% 0.1658 22.6)",
+          "oklch(51.0% 0.1598 22.6)",
+          "oklch(63.0% 0.1475 22.6)",
+          "oklch(75.0% 0.1351 22.6)",
+          "oklch(86.0% 0.1238 22.6)",
+          "oklch(95.0% 0.1146 22.6)"
+        ]
+      },
+      "pine": {
+        "role": "secondary",
+        "displayName": "Pino de Medianoche",
+        "canonical": "oklch(43.0% 0.0696 170.2)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0511 170.2)",
+          "oklch(27.0% 0.0670 170.2)",
+          "oklch(39.0% 0.0696 170.2)",
+          "oklch(51.0% 0.0671 170.2)",
+          "oklch(63.0% 0.0619 170.2)",
+          "oklch(75.0% 0.0567 170.2)",
+          "oklch(86.0% 0.0520 170.2)",
+          "oklch(95.0% 0.0481 170.2)"
+        ]
+      },
+      "pine-deep": {
+        "role": "secondary",
+        "displayName": "Pino Abeto",
+        "canonical": "oklch(31.6% 0.0506 170.5)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0372 170.5)",
+          "oklch(27.0% 0.0487 170.5)",
+          "oklch(39.0% 0.0506 170.5)",
+          "oklch(51.0% 0.0488 170.5)",
+          "oklch(63.0% 0.0450 170.5)",
+          "oklch(75.0% 0.0412 170.5)",
+          "oklch(86.0% 0.0378 170.5)",
+          "oklch(95.0% 0.0350 170.5)"
+        ]
+      },
+      "pine-soft": {
+        "role": "secondary",
+        "displayName": "Pino Suave",
+        "canonical": "oklch(48.0% 0.0736 169.7)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0541 169.7)",
+          "oklch(27.0% 0.0709 169.7)",
+          "oklch(39.0% 0.0736 169.7)",
+          "oklch(51.0% 0.0709 169.7)",
+          "oklch(63.0% 0.0655 169.7)",
+          "oklch(75.0% 0.0600 169.7)",
+          "oklch(86.0% 0.0550 169.7)",
+          "oklch(95.0% 0.0509 169.7)"
+        ]
+      },
+      "pine-glow": {
+        "role": "secondary",
+        "displayName": "Pino Resplandor",
+        "canonical": "oklch(37.2% 0.0577 169.2)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0424 169.2)",
+          "oklch(27.0% 0.0556 169.2)",
+          "oklch(39.0% 0.0577 169.2)",
+          "oklch(51.0% 0.0556 169.2)",
+          "oklch(63.0% 0.0513 169.2)",
+          "oklch(75.0% 0.0470 169.2)",
+          "oklch(86.0% 0.0431 169.2)",
+          "oklch(95.0% 0.0399 169.2)"
+        ]
+      },
+      "pine-night": {
+        "role": "secondary",
+        "displayName": "Pino Noche",
+        "canonical": "oklch(26.3% 0.0398 170.6)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0293 170.6)",
+          "oklch(27.0% 0.0383 170.6)",
+          "oklch(39.0% 0.0398 170.6)",
+          "oklch(51.0% 0.0384 170.6)",
+          "oklch(63.0% 0.0354 170.6)",
+          "oklch(75.0% 0.0325 170.6)",
+          "oklch(86.0% 0.0297 170.6)",
+          "oklch(95.0% 0.0275 170.6)"
+        ]
+      },
+      "mint": {
+        "role": "neutral",
+        "displayName": "Menta de Invierno",
+        "canonical": "oklch(93.9% 0.0134 167.2)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0099 167.2)",
+          "oklch(27.0% 0.0129 167.2)",
+          "oklch(39.0% 0.0134 167.2)",
+          "oklch(51.0% 0.0130 167.2)",
+          "oklch(63.0% 0.0120 167.2)",
+          "oklch(75.0% 0.0110 167.2)",
+          "oklch(86.0% 0.0100 167.2)",
+          "oklch(95.0% 0.0093 167.2)"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Crema de Mazapán",
+        "canonical": "oklch(97.7% 0.0074 80.7)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0054 80.7)",
+          "oklch(27.0% 0.0071 80.7)",
+          "oklch(39.0% 0.0074 80.7)",
+          "oklch(51.0% 0.0071 80.7)",
+          "oklch(63.0% 0.0066 80.7)",
+          "oklch(75.0% 0.0060 80.7)",
+          "oklch(86.0% 0.0055 80.7)",
+          "oklch(95.0% 0.0051 80.7)"
+        ]
+      },
+      "sage": {
+        "role": "neutral",
+        "displayName": "Salvia de Invernadero",
+        "canonical": "oklch(76.8% 0.0712 173.8)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0523 173.8)",
+          "oklch(27.0% 0.0686 173.8)",
+          "oklch(39.0% 0.0712 173.8)",
+          "oklch(51.0% 0.0686 173.8)",
+          "oklch(63.0% 0.0633 173.8)",
+          "oklch(75.0% 0.0580 173.8)",
+          "oklch(86.0% 0.0532 173.8)",
+          "oklch(95.0% 0.0492 173.8)"
+        ]
+      },
+      "sage-soft": {
+        "role": "neutral",
+        "displayName": "Salvia Suave",
+        "canonical": "oklch(78.5% 0.0459 169.1)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0337 169.1)",
+          "oklch(27.0% 0.0442 169.1)",
+          "oklch(39.0% 0.0459 169.1)",
+          "oklch(51.0% 0.0442 169.1)",
+          "oklch(63.0% 0.0408 169.1)",
+          "oklch(75.0% 0.0374 169.1)",
+          "oklch(86.0% 0.0342 169.1)",
+          "oklch(95.0% 0.0317 169.1)"
+        ]
+      },
+      "sage-hover": {
+        "role": "neutral",
+        "displayName": "Salvia Hover",
+        "canonical": "oklch(79.6% 0.0669 173.9)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0492 173.9)",
+          "oklch(27.0% 0.0644 173.9)",
+          "oklch(39.0% 0.0669 173.9)",
+          "oklch(51.0% 0.0645 173.9)",
+          "oklch(63.0% 0.0595 173.9)",
+          "oklch(75.0% 0.0545 173.9)",
+          "oklch(86.0% 0.0500 173.9)",
+          "oklch(95.0% 0.0462 173.9)"
+        ]
+      },
+      "sage-focus": {
+        "role": "neutral",
+        "displayName": "Salvia Focus",
+        "canonical": "oklch(82.1% 0.0617 173.7)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0454 173.7)",
+          "oklch(27.0% 0.0595 173.7)",
+          "oklch(39.0% 0.0617 173.7)",
+          "oklch(51.0% 0.0595 173.7)",
+          "oklch(63.0% 0.0549 173.7)",
+          "oklch(75.0% 0.0503 173.7)",
+          "oklch(86.0% 0.0461 173.7)",
+          "oklch(95.0% 0.0427 173.7)"
+        ]
+      },
+      "field-ink": {
+        "role": "neutral",
+        "displayName": "Tinta de Campo",
+        "canonical": "oklch(28.6% 0.0408 177.1)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0300 177.1)",
+          "oklch(27.0% 0.0393 177.1)",
+          "oklch(39.0% 0.0408 177.1)",
+          "oklch(51.0% 0.0393 177.1)",
+          "oklch(63.0% 0.0363 177.1)",
+          "oklch(75.0% 0.0332 177.1)",
+          "oklch(86.0% 0.0305 177.1)",
+          "oklch(95.0% 0.0282 177.1)"
+        ]
+      },
+      "placeholder": {
+        "role": "neutral",
+        "displayName": "Tinta de Placeholder",
+        "canonical": "oklch(42.5% 0.0533 173.9)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0392 173.9)",
+          "oklch(27.0% 0.0514 173.9)",
+          "oklch(39.0% 0.0533 173.9)",
+          "oklch(51.0% 0.0514 173.9)",
+          "oklch(63.0% 0.0474 173.9)",
+          "oklch(75.0% 0.0435 173.9)",
+          "oklch(86.0% 0.0398 173.9)",
+          "oklch(95.0% 0.0368 173.9)"
+        ]
+      },
+      "sand": {
+        "role": "neutral",
+        "displayName": "Arena de Trineo",
+        "canonical": "oklch(76.3% 0.0199 83.1)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0146 83.1)",
+          "oklch(27.0% 0.0191 83.1)",
+          "oklch(39.0% 0.0199 83.1)",
+          "oklch(51.0% 0.0191 83.1)",
+          "oklch(63.0% 0.0177 83.1)",
+          "oklch(75.0% 0.0162 83.1)",
+          "oklch(86.0% 0.0148 83.1)",
+          "oklch(95.0% 0.0137 83.1)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta de Carbón",
+        "canonical": "oklch(24.6% 0.0204 168.8)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0150 168.8)",
+          "oklch(27.0% 0.0197 168.8)",
+          "oklch(39.0% 0.0204 168.8)",
+          "oklch(51.0% 0.0197 168.8)",
+          "oklch(63.0% 0.0182 168.8)",
+          "oklch(75.0% 0.0167 168.8)",
+          "oklch(86.0% 0.0153 168.8)",
+          "oklch(95.0% 0.0141 168.8)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Blanco Nieve",
+        "canonical": "oklch(100.0% 0.0000 89.9)",
+        "tonalRamp": [
+          "oklch(15.0% 0.0000 89.9)",
+          "oklch(27.0% 0.0000 89.9)",
+          "oklch(39.0% 0.0000 89.9)",
+          "oklch(51.0% 0.0000 89.9)",
+          "oklch(63.0% 0.0000 89.9)",
+          "oklch(75.0% 0.0000 89.9)",
+          "oklch(86.0% 0.0000 89.9)",
+          "oklch(95.0% 0.0000 89.9)"
+        ]
+      },
+      "gold": {
+        "role": "accent",
+        "displayName": "Oro de Listón",
+        "canonical": "oklch(83.3% 0.1475 86.7)",
+        "tonalRamp": [
+          "oklch(15.0% 0.1084 86.7)",
+          "oklch(27.0% 0.1420 86.7)",
+          "oklch(39.0% 0.1475 86.7)",
+          "oklch(51.0% 0.1421 86.7)",
+          "oklch(63.0% 0.1312 86.7)",
+          "oklch(75.0% 0.1202 86.7)",
+          "oklch(86.0% 0.1101 86.7)",
+          "oklch(95.0% 0.1019 86.7)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Nombre del producto en la portada (2 rem)."
+      },
+      "display-sm": {
+        "displayName": "Display SM",
+        "purpose": "Título del estado vacío (1.85 rem)."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Título de la cabecera verde; tracking −0.01 em (1.7 rem)."
+      },
+      "headline-sm": {
+        "displayName": "Headline SM",
+        "purpose": "Título de formulario y de pantalla interna (1.6 rem)."
+      },
+      "heading": {
+        "displayName": "Heading",
+        "purpose": "Pregunta que abre un paso del flujo (1.45 rem)."
+      },
+      "subhead": {
+        "displayName": "Subhead",
+        "purpose": "Nombre del perfil o del intercambio en su ficha (1.35 rem)."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Entradilla y texto destacado de una tarjeta (1.08 rem)."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Párrafos; 30–34 caracteres de ancho máximo en textos centrados."
+      },
+      "body-sm": {
+        "displayName": "Body SM",
+        "purpose": "Ayudas, descripciones de regalo y textos de apoyo (0.9 rem)."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Enlaces de acción, subtítulos de lista y botones pequeños (0.84 rem)."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Metadatos, fechas, contadores y códigos (0.78 rem)."
+      },
+      "micro": {
+        "displayName": "Micro",
+        "purpose": "Badges en mayúsculas con tracking 0.06 em (0.68 rem)."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card",
+        "value": "0 1px 2px rgba(17,58,46,0.04), 0 8px 24px -12px rgba(17,58,46,0.18)",
+        "purpose": "Tarjetas de lista, formularios y estados vacíos."
+      },
+      {
+        "name": "pine",
+        "value": "0 10px 30px -12px rgba(17,58,46,0.45)",
+        "purpose": "Cabeceras verdes y el bloque de bienvenida del wishlist."
+      },
+      {
+        "name": "action",
+        "value": "0 6px 18px -8px rgba(198,46,58,0.75)",
+        "purpose": "Solo el botón primario rojo."
+      },
+      {
+        "name": "shell",
+        "value": "0 0 0 1px rgba(250,247,242,0.04), 0 40px 80px -40px rgba(0,0,0,0.6)",
+        "purpose": "Solo la columna de app en escritorio, para separarla del pino del fondo."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Transición por defecto de color, sombra y opacidad."
+      },
+      {
+        "name": "ease-rise",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Entrada de pantallas y tarjetas; sube 8 px y aparece en 420 ms."
+      },
+      {
+        "name": "state",
+        "value": "160ms",
+        "purpose": "Duración de hover, focus y cambios de fondo."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "900px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botón primario",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Acción principal de la pantalla: entrar, guardar, agregar regalo. Una sola por vista.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">Entrar</button>",
+      "css": ".ds-btn-primary {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  gap: 8px;\n  height: 48px;\n  min-width: 48px;\n  padding: 0 20px;\n  border: none;\n  border-radius: 999px;\n  background: #C62E3A;\n  color: #FFF9F5;\n  font-family: Poppins, ui-sans-serif, system-ui, sans-serif;\n  font-size: 0.95rem;\n  font-weight: 600;\n  letter-spacing: 0.005em;\n  line-height: 1;\n  cursor: pointer;\n  box-shadow: 0 6px 18px -8px rgba(198, 46, 58, 0.75);\n  transition: background-color 160ms ease, transform 120ms ease, box-shadow 160ms ease;\n}\n.ds-btn-primary:hover { background: #A3202B; box-shadow: 0 8px 22px -9px rgba(163, 32, 43, 0.8); }\n.ds-btn-primary:active { transform: translateY(1px); }\n.ds-btn-primary:focus-visible { outline: 2px solid #1F5C4A; outline-offset: 3px; }"
+    },
+    {
+      "name": "Botón secundario",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Acciones de apoyo: nuevo grupo, añadir participante, ajustes. Nunca compite con el rojo.",
+      "html": "<button class=\"ds-btn-secondary\" type=\"button\">Nuevo grupo</button>",
+      "css": ".ds-btn-secondary {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  gap: 8px;\n  height: 48px;\n  padding: 0 20px;\n  border: none;\n  border-radius: 999px;\n  background: #1F5C4A;\n  color: #FAF7F2;\n  font-family: Poppins, ui-sans-serif, system-ui, sans-serif;\n  font-size: 0.95rem;\n  font-weight: 600;\n  line-height: 1;\n  cursor: pointer;\n  transition: background-color 160ms ease, transform 120ms ease;\n}\n.ds-btn-secondary:hover { background: #113A2E; }\n.ds-btn-secondary:active { transform: translateY(1px); }\n.ds-btn-secondary:focus-visible { outline: 2px solid #C62E3A; outline-offset: 3px; }"
+    },
+    {
+      "name": "Campo de texto",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Campos de formulario sobre salvia, sin borde en reposo y con halo de pino al enfocar.",
+      "html": "<label class=\"ds-field-label\" for=\"ds-field\">Tu nombre\n  <input class=\"ds-field\" id=\"ds-field\" type=\"text\" placeholder=\"Ana Sofía\" value=\"Ana Sofía\" />\n</label>",
+      "css": ".ds-field-label {\n  display: block;\n  font-family: Poppins, ui-sans-serif, system-ui, sans-serif;\n  font-size: 0.8125rem;\n  font-weight: 600;\n  letter-spacing: 0.04em;\n  text-transform: uppercase;\n  color: #1F5C4A;\n}\n.ds-field {\n  display: block;\n  width: 100%;\n  min-height: 48px;\n  margin-top: 6px;\n  padding: 12px 16px;\n  border: 1px solid transparent;\n  border-radius: 14px;\n  background: #83C3B0;\n  color: #10312A;\n  font-family: Poppins, ui-sans-serif, system-ui, sans-serif;\n  font-size: 1rem;\n  font-weight: 500;\n  transition: background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease;\n}\n.ds-field::placeholder { color: #5D7770; opacity: 1; }\n.ds-field:hover { background: #8FCCB9; }\n.ds-field:focus {\n  outline: none;\n  background: #96D0BE;\n  border-color: #1F5C4A;\n  box-shadow: 0 0 0 3px rgba(31, 92, 74, 0.16);\n}"
+    },
+    {
+      "name": "Chip de prioridad",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Etiqueta de prioridad del regalo: Alta en rojo al 10 %, Media en oro al 25 %, Baja en salvia al 30 %.",
+      "html": "<span class=\"ds-chip ds-chip-high\">Alta</span>",
+      "css": ".ds-chip {\n  display: inline-flex;\n  align-items: center;\n  gap: 6px;\n  padding: 4px 12px;\n  border-radius: 999px;\n  font-family: Poppins, ui-sans-serif, system-ui, sans-serif;\n  font-size: 0.7rem;\n  font-weight: 600;\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n  white-space: nowrap;\n}\n.ds-chip-high { background: rgba(198, 46, 58, 0.1); color: #A3202B; }\n.ds-chip-med { background: rgba(242, 193, 68, 0.25); color: #6B4E05; }\n.ds-chip-low { background: rgba(131, 195, 176, 0.3); color: #1F5C4A; }"
+    },
+    {
+      "name": "Tarjeta de intercambio",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Fila del inicio: tarjeta crema con regalo de marca, nombre del grupo y metadatos en dos líneas.",
+      "html": "<a class=\"ds-group-card\" href=\"#\">\n  <span class=\"ds-group-card-thumb\" aria-hidden=\"true\">\n    <svg viewBox=\"0 0 40 40\" width=\"28\" height=\"28\"><rect x=\"6\" y=\"18\" width=\"28\" height=\"17\" rx=\"2.5\" fill=\"#C62E3A\"/><rect x=\"4\" y=\"13\" width=\"32\" height=\"7\" rx=\"2.5\" fill=\"#E24A56\"/><rect x=\"18\" y=\"13\" width=\"4\" height=\"22\" fill=\"#F2C144\"/><rect x=\"4\" y=\"15\" width=\"32\" height=\"3\" fill=\"#F2C144\"/><path d=\"M20 13c-4-7-11-7-11-2s7 4 11 2Z\" fill=\"#F2C144\"/><path d=\"M20 13c4-7 11-7 11-2s-7 4-11 2Z\" fill=\"#F2C144\"/><circle cx=\"20\" cy=\"13\" r=\"3\" fill=\"#FFE79B\"/></svg>\n  </span>\n  <span class=\"ds-group-card-body\">\n    <span class=\"ds-group-card-name\">Navidad en casa</span>\n    <span class=\"ds-group-card-meta\">24 de diciembre de 2026</span>\n    <span class=\"ds-group-card-meta\">6 participantes</span>\n  </span>\n  <svg class=\"ds-group-card-chevron\" viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"#1F5C4A\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m9 6 6 6-6 6\"/></svg>\n</a>",
+      "css": ".ds-group-card {\n  display: flex;\n  align-items: center;\n  gap: 14px;\n  padding: 14px 16px;\n  border-radius: 18px;\n  background: #FAF7F2;\n  box-shadow: 0 1px 2px rgba(17, 58, 46, 0.04), 0 8px 24px -12px rgba(17, 58, 46, 0.18);\n  text-decoration: none;\n  font-family: Poppins, ui-sans-serif, system-ui, sans-serif;\n  transition: transform 160ms ease, box-shadow 160ms ease;\n}\n.ds-group-card:hover { transform: translateY(-1px); box-shadow: 0 2px 4px rgba(17, 58, 46, 0.06), 0 14px 28px -14px rgba(17, 58, 46, 0.26); }\n.ds-group-card:focus-visible { outline: 2px solid #1F5C4A; outline-offset: 3px; }\n.ds-group-card-thumb {\n  display: grid;\n  place-items: center;\n  flex: 0 0 auto;\n  width: 52px;\n  height: 52px;\n  border-radius: 14px;\n  background: #E3EEE9;\n}\n.ds-group-card-body { display: grid; flex: 1 1 auto; gap: 2px; min-width: 0; }\n.ds-group-card-name { font-size: 1.02rem; font-weight: 600; line-height: 1.3; color: #17241F; }\n.ds-group-card-meta { font-size: 0.76rem; font-weight: 400; line-height: 1.35; color: #45605A; }\n.ds-group-card-chevron { flex: 0 0 auto; opacity: 0.75; }"
+    },
+    {
+      "name": "Cabecera de pino",
+      "kind": "custom",
+      "description": "Bloque de 28 px de radio con degradado de pino, título centrado y subtítulo. Firma de cada pantalla.",
+      "html": "<header class=\"ds-pine-header\">\n  <h2>Navidad en casa</h2>\n  <p>Comparte tus deseos navideños con familia y amigos</p>\n  <div class=\"ds-pine-header-badge\">BOTA-DGMM</div>\n</header>",
+      "css": ".ds-pine-header {\n  position: relative;\n  padding: 28px 24px 24px;\n  border-radius: 28px;\n  background-image: radial-gradient(120% 90% at 22% 0%, #2D7059 0%, transparent 58%), linear-gradient(160deg, #22624F 0%, #1F5C4A 52%, #1A5142 100%);\n  color: #FAF7F2;\n  text-align: center;\n  box-shadow: 0 10px 30px -12px rgba(17, 58, 46, 0.45);\n  overflow: hidden;\n  font-family: Poppins, ui-sans-serif, system-ui, sans-serif;\n}\n.ds-pine-header::after { content: \"\"; position: absolute; inset: 0; border-radius: inherit; border: 1px solid rgba(250, 247, 242, 0.1); pointer-events: none; }\n.ds-pine-header h2 { margin: 0; font-size: 1.7rem; font-weight: 600; line-height: 1.15; letter-spacing: -0.01em; }\n.ds-pine-header p { max-width: 34ch; margin: 6px auto 0; font-size: 0.9rem; font-weight: 400; line-height: 1.4; color: rgba(250, 247, 242, 0.8); }\n.ds-pine-header-badge {\n  display: inline-block;\n  margin-top: 20px;\n  padding: 8px 16px;\n  border-radius: 999px;\n  border: 1px solid rgba(250, 247, 242, 0.15);\n  background: rgba(255, 255, 255, 0.06);\n  font-size: 0.7rem;\n  font-weight: 600;\n  letter-spacing: 0.16em;\n  text-transform: uppercase;\n}"
+    },
+    {
+      "name": "Dock de acción",
+      "kind": "nav",
+      "description": "Barra fija al pie de la columna de 430 px, con degradado menta y el botón primario a ancho completo.",
+      "html": "<div class=\"ds-dock\">\n  <button class=\"ds-dock-btn\" type=\"button\">Agregar regalo</button>\n</div>",
+      "css": ".ds-dock {\n  width: 100%;\n  max-width: 430px;\n  margin: 0 auto;\n  padding: 12px 20px calc(12px + env(safe-area-inset-bottom, 0px));\n  background: linear-gradient(to top, #E3EEE9 62%, rgba(227, 238, 233, 0.92) 82%, transparent);\n  font-family: Poppins, ui-sans-serif, system-ui, sans-serif;\n}\n.ds-dock-btn {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 100%;\n  height: 52px;\n  border: none;\n  border-radius: 999px;\n  background: #C62E3A;\n  color: #FFF9F5;\n  font-size: 1rem;\n  font-weight: 600;\n  cursor: pointer;\n  box-shadow: 0 6px 18px -8px rgba(198, 46, 58, 0.75);\n  transition: background-color 160ms ease, transform 120ms ease;\n}\n.ds-dock-btn:hover { background: #A3202B; }\n.ds-dock-btn:active { transform: translateY(1px); }\n.ds-dock-btn:focus-visible { outline: 2px solid #1F5C4A; outline-offset: 3px; }"
+    },
+    {
+      "name": "Regalo de marca",
+      "kind": "custom",
+      "description": "Caja roja con listón y moño dorado, SVG dibujado a mano. Se usa en login, estados vacíos y banners; nunca un emoji.",
+      "html": "<svg class=\"ds-gift\" viewBox=\"0 0 128 128\" role=\"img\" aria-label=\"Regalo\">\n  <defs>\n    <linearGradient id=\"ds-gold\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#FFE79B\"/><stop offset=\".42\" stop-color=\"#F3C64C\"/><stop offset=\"1\" stop-color=\"#C08A1D\"/></linearGradient>\n    <linearGradient id=\"ds-gold-deep\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0\" stop-color=\"#D9A62E\"/><stop offset=\"1\" stop-color=\"#9C6C13\"/></linearGradient>\n    <linearGradient id=\"ds-red\" x1=\"0\" y1=\"0\" x2=\".6\" y2=\"1\"><stop offset=\"0\" stop-color=\"#E24A56\"/><stop offset=\".55\" stop-color=\"#C62E3A\"/><stop offset=\"1\" stop-color=\"#9E1D28\"/></linearGradient>\n    <linearGradient id=\"ds-red-deep\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0\" stop-color=\"#A3202B\"/><stop offset=\"1\" stop-color=\"#7E131D\"/></linearGradient>\n  </defs>\n  <ellipse cx=\"64\" cy=\"120\" rx=\"42\" ry=\"6\" fill=\"#0B2A21\" opacity=\".22\"/>\n  <rect x=\"20\" y=\"61\" width=\"88\" height=\"56\" rx=\"6\" fill=\"url(#ds-red)\"/>\n  <rect x=\"88\" y=\"61\" width=\"20\" height=\"56\" rx=\"6\" fill=\"url(#ds-red-deep)\"/>\n  <rect x=\"20\" y=\"61\" width=\"88\" height=\"56\" rx=\"6\" fill=\"none\" stroke=\"#7E131D\" stroke-opacity=\".35\"/>\n  <rect x=\"12\" y=\"42\" width=\"104\" height=\"22\" rx=\"6\" fill=\"url(#ds-red)\"/>\n  <rect x=\"94\" y=\"42\" width=\"22\" height=\"22\" rx=\"6\" fill=\"url(#ds-red-deep)\"/>\n  <rect x=\"16\" y=\"45\" width=\"96\" height=\"4\" rx=\"2\" fill=\"#FFD9DA\" opacity=\".18\"/>\n  <rect x=\"57\" y=\"61\" width=\"14\" height=\"56\" fill=\"url(#ds-gold)\"/>\n  <rect x=\"57\" y=\"61\" width=\"4\" height=\"56\" fill=\"#FFF0BF\" opacity=\".45\"/>\n  <rect x=\"68\" y=\"61\" width=\"3\" height=\"56\" fill=\"url(#ds-gold-deep)\" opacity=\".8\"/>\n  <rect x=\"12\" y=\"48\" width=\"104\" height=\"11\" fill=\"url(#ds-gold)\"/>\n  <rect x=\"12\" y=\"48\" width=\"104\" height=\"3\" fill=\"#FFF0BF\" opacity=\".5\"/>\n  <rect x=\"12\" y=\"56\" width=\"104\" height=\"3\" fill=\"url(#ds-gold-deep)\" opacity=\".65\"/>\n  <path d=\"M62 45C50 22 26 19 22 32c-4 12 16 17 40 15Z\" fill=\"url(#ds-gold)\" stroke=\"#B57F16\" stroke-opacity=\".55\"/>\n  <path d=\"M66 45c12-23 36-26 40-13 4 12-16 17-40 15Z\" fill=\"url(#ds-gold)\" stroke=\"#B57F16\" stroke-opacity=\".55\"/>\n  <path d=\"M60 50c-6 14-14 24-25 29 3-14 12-25 20-31Z\" fill=\"url(#ds-gold)\" stroke=\"#B57F16\" stroke-opacity=\".5\"/>\n  <path d=\"M68 50c6 14 14 24 25 29-3-14-12-25-20-31Z\" fill=\"url(#ds-gold-deep)\" stroke=\"#B57F16\" stroke-opacity=\".5\"/>\n  <circle cx=\"64\" cy=\"46\" r=\"9.5\" fill=\"url(#ds-gold)\" stroke=\"#B57F16\" stroke-opacity=\".6\"/>\n  <circle cx=\"61\" cy=\"43\" r=\"3\" fill=\"#FFFBEA\" opacity=\".55\"/>\n</svg>",
+      "css": ".ds-gift { display: block; width: 96px; height: 96px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "El Pueblo Nevado",
+    "overview": "Bota de Navidad se siente como una tarjeta de Nochebuena que cobra vida: un pueblito de tejados nevados al pie de cada pantalla, un regalo con listón dorado y una paleta de pino, crema y rojo que ya huele a ponche. La interfaz es móvil primero, cálida y directa, sin adornos que compitan con la tarea: crear el intercambio, sumar a la familia y llenar la lista de deseos.\n\nEl mundo visual vive en una columna angosta de app sobre un fondo verde profundo, incluso en escritorio. Esa decisión mantiene la intimidad del teléfono y evita que el producto se convierta en un panel corporativo. La nieve no cae: se queda quieta en la silueta del pueblo y en los puntos suaves del cielo, como una escena de ventana.\n\nLa voz visual es mexicana y familiar sin ser infantil. Los bordes son generosos, los botones son píldoras rojas, las tarjetas son de papel crema y los campos son de salvia. Nada de vidrio esmerilado, nada de degradados morados, nada de iconos emoji: el regalo y el pueblo están dibujados a mano en SVG.",
+    "keyCharacteristics": [
+      "Columna de app de 430 px centrada sobre un degradado de pino profundo.",
+      "Fondo menta en las pantallas, tarjetas crema, cabeceras verdes y acciones rojas.",
+      "Poppins geométrica en cuatro pesos, con titulares de tracking apretado.",
+      "Formas suaves: píldoras para acciones, esquinas de 14–18 px en campos y tarjetas.",
+      "Escena de pueblo nevado y regalo dorado como firma gráfica, nunca como decoración ruidosa."
+    ],
+    "rules": [
+      {
+        "name": "La Regla del Rojo Escaso",
+        "body": "El rojo Bota aparece en una sola acción primaria por pantalla. Si hay dos rojos compitiendo, uno está mal.",
+        "section": "colors"
+      },
+      {
+        "name": "La Regla del Papel Crema",
+        "body": "Las tarjetas son crema; el fondo de página es menta. No se invierten ni se mezclan en la misma jerarquía.",
+        "section": "colors"
+      },
+      {
+        "name": "La Regla del Titular Corto",
+        "body": "Un titular no compite con su propio subtítulo: si necesita más de dos líneas en 390 px, se acorta el texto, no la tipografía.",
+        "section": "typography"
+      },
+      {
+        "name": "La Regla de la Nieve en Reposo",
+        "body": "Ninguna superficie se mueve ni brilla sin una razón de estado. El hover levanta 0.5 px como máximo; el resto del tiempo, todo está quieto.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do mantener una sola acción roja por pantalla y dejar el resto en pino, ghost o soft.",
+      "Do usar la columna de 430 px también en escritorio; el fondo de pino es el marco, no el lienzo.",
+      "Do reservar 7 rem de espacio inferior cuando haya dock fijo.",
+      "Do escribir en español de México, cercano y sin jerga; los textos de ayuda van en 0.78–0.84 rem.",
+      "Do usar Poppins con tracking negativo en titulares y tracking abierto en etiquetas.",
+      "Do mantener objetivos táctiles de al menos 44 px y foco visible en todos los controles.",
+      "Do respetar `prefers-reduced-motion`: la nieve y las entradas se apagan."
+    ],
+    "donts": [
+      "Don't usar el rojo Bota como fondo de bloques grandes, badges de información o decoración.",
+      "Don't invertir la jerarquía de superficies: el fondo nunca es crema si las tarjetas también lo son.",
+      "Don't introducir morados, azules fríos, vidrio esmerilado ni degradados ajenos a la paleta.",
+      "Don't usar emojis como iconos ni imágenes de stock para el regalo o el pueblo.",
+      "Don't poner dos botones sólidos del mismo peso visual lado a lado; uno debe ceder.",
+      "Don't añadir barra de pestañas inferior ni menús hamburguesa: la navegación ya es clara con retorno y contexto."
+    ]
+  }
+}

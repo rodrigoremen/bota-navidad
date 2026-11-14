@@ -2,7 +2,7 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate
 
 generator client {
   provider = "prisma-client"
@@ -29,19 +29,50 @@ model Profile {
   createdAt       DateTime         @default(now())
   updatedAt       DateTime         @updatedAt
   wishlist        WishlistItem[]
+  ownedGroups     Group[]          @relation("GroupOwner")
+  memberships     GroupMember[]
+}
+
+model Group {
+  id             Int           @id @default(autoincrement())
+  name           String
+  code           String        @unique
+  exchangeDate   DateTime?
+  budget         Float?
+  allowComments  Boolean       @default(true)
+  ownerId        Int
+  owner          Profile       @relation("GroupOwner", fields: [ownerId], references: [id], onDelete: Cascade)
+  members        GroupMember[]
+  wishlist       WishlistItem[]
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+}
+
+model GroupMember {
+  id        Int      @id @default(autoincrement())
+  groupId   Int
+  profileId Int
+  role      String   @default("member") // owner | member
+  createdAt DateTime @default(now())
+  group     Group    @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  profile   Profile  @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@unique([groupId, profileId])
 }
 
 model WishlistItem {
-  id          Int     @id @default(autoincrement())
+  id          Int      @id @default(autoincrement())
   name        String
   url         String
-  image       String?         // URL de la imagen del regalo
-  description String?         // Descripción del regalo
-  price       Float?          // Precio aproximado
-  category    String?         // Categoría (Tecnología, Ropa, Libros, etc)
-  priority    String?         // Alta, Media, Baja
+  image       String?  // URL de la imagen del regalo
+  description String?  // Descripción del regalo
+  price       Float?   // Precio aproximado
+  category    String?  // Categoría (Tecnología, Ropa, Libros, etc)
+  priority    String?  // Alta, Media, Baja
   profileId   Int
-  profile     Profile @relation(fields: [profileId], references: [id])
-  createdAt   DateTime        @default(now())
-  updatedAt   DateTime        @updatedAt
+  profile     Profile  @relation(fields: [profileId], references: [id])
+  groupId     Int?
+  group       Group?   @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }

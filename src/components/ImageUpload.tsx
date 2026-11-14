@@ -2,94 +2,99 @@
 
 import { useState } from 'react';
 import { CldUploadWidget } from 'next-cloudinary';
-import { Upload, X } from 'lucide-react';
+import { Upload, X, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import Image from 'next/image';
+import { cn } from '@/libs/utils';
 
 interface ImageUploadProps {
 	value?: string;
 	onChange: (url: string) => void;
 	onRemove: () => void;
+	shape?: 'circle' | 'square';
+	label?: string;
 }
 
-export function ImageUpload({ value, onChange, onRemove }: ImageUploadProps) {
+export function ImageUpload({
+	value,
+	onChange,
+	onRemove,
+	shape = 'circle',
+	label = 'foto',
+}: ImageUploadProps) {
 	const [isUploading, setIsUploading] = useState(false);
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const handleUploadSuccess = (result: any) => {
 		if (result.event === 'success') {
-			const url = result.info.secure_url;
-			onChange(url);
+			onChange(result.info.secure_url);
 			setIsUploading(false);
 		}
 	};
 
+	const frame = shape === 'circle' ? 'rounded-full' : 'rounded-2xl';
+
 	return (
-		<div className="space-y-4">
-			{value ? (
-				<div className="relative mx-auto w-fit">
-					<div className="relative w-48 h-48 rounded-full overflow-hidden mx-auto border-4 border-white/20 shadow-xl">
-						<Image
-							src={value}
-							alt="Profile picture"
-							fill
-							className="object-cover"
-						/>
-					</div>
+		<div className="flex flex-col items-center gap-3">
+			<div className="relative">
+				<div
+					className={cn(
+						'flex h-28 w-28 items-center justify-center overflow-hidden border-2 border-pine/15 bg-mint',
+						frame
+					)}
+				>
+					{value ? (
+						// eslint-disable-next-line @next/next/no-img-element
+						<img src={value} alt={`Vista previa de ${label}`} className="h-full w-full object-cover" />
+					) : (
+						<Upload className="h-8 w-8 text-pine/45" strokeWidth={1.6} aria-hidden="true" />
+					)}
+				</div>
+
+				{value ? (
 					<button
-						onClick={() => {
-							onRemove();
-						}}
-						className="absolute -top-2 -right-2 bg-red-500 hover:bg-red-600 text-white rounded-full p-1.5 transition-colors z-10 shadow-lg"
 						type="button"
+						onClick={onRemove}
+						aria-label={`Quitar ${label}`}
+						className="absolute -right-1.5 -top-1.5 flex h-8 w-8 items-center justify-center rounded-full bg-bota text-primary-foreground shadow-md transition-colors hover:bg-bota-deep"
 					>
-						<X className="h-5 w-5" />
+						<X className="h-4 w-4" strokeWidth={2.4} />
 					</button>
-				</div>
-			) : (
-				<div className="flex flex-col items-center justify-center space-y-2">
-					<div className="w-48 h-48 rounded-full bg-white/5 border-2 border-dashed border-white/20 flex items-center justify-center">
-						<Upload className="h-12 w-12 text-gray-400" />
-					</div>
-				</div>
-			)}
-			
+				) : null}
+			</div>
+
 			<CldUploadWidget
 				uploadPreset={process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET || 'bota-navidad'}
 				options={{
 					maxFiles: 1,
 					resourceType: 'image',
 					clientAllowedFormats: ['jpg', 'jpeg', 'png', 'gif', 'webp'],
-					maxFileSize: 2000000, // 2MB
-					cropping: true,
+					maxFileSize: 2000000,
+					cropping: shape === 'circle',
 					croppingAspectRatio: 1,
-					croppingShowDimensions: true,
+					croppingShowDimensions: false,
 					folder: 'bota-navidad',
 				}}
 				onSuccess={handleUploadSuccess}
-				onError={() => {
-					console.error('❌ Upload error');
-					setIsUploading(false);
-				}}
+				onError={() => setIsUploading(false)}
 			>
 				{({ open }) => (
-					<div className="flex justify-center">
-						<Button
-							type="button"
-							onClick={() => {
-								console.log('🖱️ Click en botón subir foto');
-								setIsUploading(true);
-								open();
-							}}
-							variant="outline"
-							size="sm"
-							disabled={isUploading}
-							className="border-purple-500/50 hover:bg-purple-500/20 text-purple-300"
-						>
-							<Upload className="h-4 w-4 mr-2" />
-							{isUploading ? 'Subiendo...' : value ? 'Cambiar foto' : 'Subir foto'}
-						</Button>
-					</div>
+					<Button
+						type="button"
+						variant="soft"
+						size="sm"
+						disabled={isUploading}
+						onClick={() => {
+							setIsUploading(true);
+							open();
+						}}
+					>
+						{isUploading ? (
+							<Loader2 className="h-4 w-4 animate-spin" />
+						) : (
+							<Upload className="h-4 w-4" strokeWidth={1.9} />
+						)}
+						{isUploading ? 'Subiendo…' : value ? 'Cambiar foto' : 'Subir foto'}
+					</Button>
 				)}
 			</CldUploadWidget>
 		</div>
